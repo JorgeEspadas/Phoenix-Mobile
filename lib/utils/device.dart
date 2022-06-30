@@ -70,4 +70,14 @@ class Device {
     await _preferences.clear();
     debugPrint('$_prefix Cleared Device SharedPreferences');
   }
+
+  static navigateToView({required Widget view}) {
+    try {
+      _navigatorKey.currentState?.push(PageRouteBuilder(
+          pageBuilder: (context, __, ___) => view,
+          transitionDuration: const Duration(seconds: 0)));
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
 }

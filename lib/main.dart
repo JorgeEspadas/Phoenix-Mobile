@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:phoenix_mobile/app/home/view.dart';
+import 'package:phoenix_mobile/themes/phoenix.dart';
 import 'package:phoenix_mobile/utils/device.dart';
 
 void main() async {
@@ -19,7 +20,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: Device.getNavigatorKey,
-      theme: ThemeData(fontFamily: 'Muli'),
+      theme: ThemeData(
+          fontFamily: 'Muli',),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       onGenerateRoute: (RouteSettings settings) {
